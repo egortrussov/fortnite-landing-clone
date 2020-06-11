@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0f22e9c5d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
 </head>
 <body>
     <nav>
@@ -15,13 +16,22 @@
             </a>
             <div class="game-logo">
             </div>
+            <div class="links-container toggle-btn">
+                <a href="" class="nav-btn toggle-menu">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
             <div class="links-container">
                 <a href="#" class="nav-btn">Battle pass</a>
                 <a href="#" class="nav-btn">Creative</a>
                 <a href="#" class="nav-btn">Save the world</a>
                 <a href="#" class="nav-btn">News</a>
                 <a href="#" class="nav-btn">Competitive</a>
+                <a href="" class="nav-btn toggle-menu">
+                    <i class="fas fa-bars"></i>
+                </a>
             </div>
+            
         </div>
         <div class="nav-right">
             <div class="links-container">
@@ -56,9 +66,34 @@
     </header>
 
     <section class="slider">
-        
+        <div class="section-divider-img">
+            <img src="./img/gold-medal.png" alt="">
+        </div>
+
+        <div class="gold-line left">
+            <img src="./img/gold-lines.png" alt="">
+        </div>
+
+        <div class="gold-line right">
+            <img src="./img/gold-lines-right.png" alt="">
+        </div>
+
+
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="./img/slider-img-1.png">
+            </div>
+            <div class="item">
+                <img src="./img/slider-img-2.png">
+            </div>
+            <div class="item">
+                <img src="./img/slider-img-3.png">
+            </div>
+        </div>
     </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>

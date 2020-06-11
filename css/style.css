@@ -15,8 +15,14 @@
           box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
+  width: 100%;
   font-family: main-font;
+  overflow-x: hidden !important;
 }
 
 a {
@@ -39,17 +45,21 @@ nav {
   color: #fff;
   background-color: #2a2a2a;
   padding-left: 0rem;
+  overflow: hidden;
 }
 
 nav .nav-btn {
-  height: 100%;
+  height: 100% !important;
   padding: 0 .5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-transform: uppercase;
   font-size: 10px;
   letter-spacing: 1px;
@@ -62,26 +72,30 @@ nav .nav-btn {
 
 nav .nav-btn i {
   font-size: 1rem;
+  display: block;
+  text-align: center;
 }
 
 nav .nav-btn i.with-margin {
-  margin-right: .3rem;
+  margin-right: .5rem;
+}
+
+@media (max-width: 600px) {
+  nav .nav-btn span {
+    display: none;
+  }
 }
 
 nav .nav-btn::after {
   position: absolute;
   content: '';
   width: 100%;
-  height: 5px;
+  height: 0;
   background-color: #ffff00;
   top: auto;
   bottom: 0;
-  -webkit-transform: translateY(5px);
-          transform: translateY(5px);
-  -webkit-transition: -webkit-transform .2s;
-  transition: -webkit-transform .2s;
-  transition: transform .2s;
-  transition: transform .2s, -webkit-transform .2s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 nav .nav-btn.cta {
@@ -99,8 +113,7 @@ nav .nav-btn:hover {
 }
 
 nav .nav-btn:hover::after {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  height: 5px;
 }
 
 nav .links-container {
@@ -117,6 +130,15 @@ nav .nav-left {
   height: 100%;
 }
 
+@media (max-width: 890px) {
+  nav .nav-left .links-container {
+    display: none;
+  }
+  nav .nav-left .links-container.toggle-btn {
+    display: block;
+  }
+}
+
 nav .nav-left .company-logo {
   width: 60px;
   height: 100%;
@@ -131,6 +153,28 @@ nav .nav-left .game-logo {
   height: 100%;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+@media (max-width: 600px) {
+  nav .nav-left .game-logo {
+    display: none;
+  }
+}
+
+nav .nav-left .toggle-menu {
+  display: none;
+}
+
+@media (max-width: 890px) {
+  nav .nav-left .toggle-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+nav .nav-left .toggle-menu i {
+  font-size: 1.3rem !important;
 }
 
 nav .nav-right {
@@ -152,7 +196,25 @@ header {
   width: 100%;
   height: 90vh;
   min-height: 850px;
-  background: url("../img/hero-bg.jpg") 100% 100%;
+  background: url("../img/hero-bg.jpg") 100% 100% no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 600px) {
+  header {
+    min-height: 560px;
+  }
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 0;
+  z-index: 0;
 }
 
 header .battle-pass-container {
@@ -162,6 +224,7 @@ header .battle-pass-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 1;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -181,6 +244,13 @@ header .battle-pass-container .text-container h1 {
   font-size: 10rem;
   color: #4dccfa;
   margin: 1rem 0;
+  line-height: .8;
+}
+
+@media (max-width: 600px) {
+  header .battle-pass-container .text-container h1 {
+    font-size: 7rem;
+  }
 }
 
 header .battle-pass-container .text-container h2 {
@@ -189,11 +259,115 @@ header .battle-pass-container .text-container h2 {
   letter-spacing: 1px;
 }
 
+@media (max-width: 600px) {
+  header .battle-pass-container .text-container h2 {
+    font-size: 2rem;
+  }
+}
+
 .slider {
-  height: 400px;
+  height: auto;
+  padding-top: 13rem;
+  padding-bottom: 3rem;
   background-color: #000;
   width: 100%;
   position: relative;
+  color: #fff;
+}
+
+@media (max-width: 360px) {
+  .slider {
+    padding-top: 5rem;
+  }
+}
+
+.slider .owl-nav {
+  display: none;
+}
+
+.slider .owl-carousel {
+  padding: 0 1rem;
+  max-width: 950px;
+  margin: auto;
+}
+
+.slider .gold-line {
+  width: 350px;
+  position: absolute;
+  top: 0;
+}
+
+@media (max-width: 890px) {
+  .slider .gold-line {
+    width: 230px;
+  }
+}
+
+@media (max-width: 360px) {
+  .slider .gold-line {
+    width: 100px;
+  }
+}
+
+.slider .gold-line.left {
+  left: 0;
+}
+
+@media (max-width: 600px) {
+  .slider .gold-line.left {
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+  }
+}
+
+@media (max-width: 360px) {
+  .slider .gold-line.left {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+}
+
+.slider .gold-line.right {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 600px) {
+  .slider .gold-line.right {
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+  }
+}
+
+@media (max-width: 360px) {
+  .slider .gold-line.right {
+    -webkit-transform: translateX(15px);
+            transform: translateX(15px);
+  }
+}
+
+.slider .gold-line img {
+  width: 100%;
+}
+
+.slider .owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slider .owl-dots .owl-dot {
+  width: 60px;
+  height: 12px;
+  margin: 0 .7rem;
+  background-color: rgba(77, 204, 250, 0.5);
+}
+
+.slider .owl-dots .owl-dot.active {
+  background-color: #4dccfa;
 }
 
 .slider::before {
@@ -203,9 +377,30 @@ header .battle-pass-container .text-container h2 {
   -webkit-clip-path: polygon(100% 100%, 100% 0, 90% 20%, 93% 0, 50% 80%, 7% 0, 10% 20%, 0 0, 0 100%);
           clip-path: polygon(100% 100%, 100% 0, 90% 20%, 93% 0, 50% 80%, 7% 0, 10% 20%, 0 0, 0 100%);
   height: 6vw;
+  min-height: 50px;
   z-index: 1;
   width: 100%;
   background: #000;
   bottom: calc(100% - 2px);
+}
+
+.slider .section-divider-img {
+  position: absolute;
+  left: 50%;
+  width: 160px;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  bottom: calc(100% - 2px);
+  z-index: 2;
+}
+
+@media (max-width: 600px) {
+  .slider .section-divider-img {
+    width: 90px;
+  }
+}
+
+.slider .section-divider-img img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
