@@ -486,6 +486,7 @@ header .battle-pass-container .text-container h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -529,5 +530,47 @@ header .battle-pass-container .text-container h2 {
 
 .colors .container .right img {
   width: 100%;
+}
+
+.v-bucks {
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.v-bucks .img {
+  width: 100%;
+  padding: 3rem;
+}
+
+@media (max-width: 600px) {
+  .v-bucks .img {
+    padding: 3rem .5rem 0 .5rem;
+  }
+}
+
+.v-bucks .img img {
+  width: 100%;
+}
+
+.v-bucks .text-container {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.v-bucks .section-divider {
+  position: absolute;
+  width: 100%;
+  top: auto;
+}
+
+.v-bucks .section-divider img {
+  width: 100%;
+}
+
+.moves {
+  height: 500px;
+  background-color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

@@ -399,7 +399,7 @@ header {
 
 .suit-up {
     padding-bottom: 2.5rem;
-    
+
     .text-container {
         text-align: center;
         margin: auto;
@@ -424,6 +424,7 @@ header {
         padding: 2rem;
         display: flex;
         align-items: center;
+        margin: auto;
         justify-content: space-between;
 
         .left {
@@ -447,4 +448,46 @@ header {
             }
         }
     }
+}
+
+.v-bucks {
+    padding-bottom: 3rem;
+    position: relative;
+
+    .img {
+        @include tablet {
+            padding: 3rem .5rem 0 .5rem;
+        }
+
+        width: 100%;
+        padding: 3rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .text-container {
+        text-align: center;
+        margin: auto;
+        width: 90%;
+        max-width: 1000px;
+    }
+
+    .section-divider {
+        position: absolute;
+        width: 100%;
+        top: auto;
+        // transform: translateY(100%);
+
+        img {
+            width: 100%;
+        }
+    }
+
+}
+
+.moves {
+    height: 500px;
+    background-color: #fff;
 }
