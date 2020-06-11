@@ -34,6 +34,55 @@ a {
     text-decoration: none;
 }
 
+section {
+    background-color: #000;
+}
+
+.section-header {
+    @include mobile-lg {
+        font-size: 3rem;
+    }
+
+    font-family: main-font-black;
+    color: $blue;
+    font-size: 5rem;
+    margin-bottom: 1.5rem;     
+    text-transform: uppercase;
+
+    &.sm {
+        @include mobile-lg {
+            font-size: 2rem;
+        }
+
+        font-size: 3.5rem;
+    }
+}
+
+.section-subheader {
+    @include desktop-sm {
+        font-size: 1.8rem;
+    }
+
+    @include mobile-lg {
+        font-size: 1.3rem;
+    }
+
+    color: #fff;
+    font-size: 2.3rem;
+
+    &.sm {
+        @include desktop-sm {
+            font-size: 1.4rem;
+        }
+    
+        @include mobile-lg {
+            font-size: 1rem;
+        }
+
+        font-size: 1.9rem;
+    }
+}
+
 nav {
     font-family: $secondary-font;
     width: 100%;
@@ -344,6 +393,58 @@ header {
 
         img {
             width: 100%;
+        }
+    }
+}
+
+.suit-up {
+    padding-bottom: 2.5rem;
+    
+    .text-container {
+        text-align: center;
+        margin: auto;
+        width: 90%;
+        max-width: 1000px;
+    }
+}
+
+.colors {
+
+    .container {
+        @include mobile-sm {
+            padding: .5rem;
+        }
+
+        @include tablet-lg {
+            flex-direction: column-reverse;
+        }
+
+        width: 100%;
+        max-width: 1300px;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+            @include tablet-lg {
+                width: 100% !important;
+                text-align: center;
+            }
+
+            width: 40%;
+        }
+
+        .right {
+            @include tablet-lg {
+                width: 100% !important;
+            }
+
+            width: 50% !important;
+
+            img {
+                width: 100%;
+            }
         }
     }
 }
