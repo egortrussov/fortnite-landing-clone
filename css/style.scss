@@ -451,7 +451,7 @@ header {
 }
 
 .v-bucks {
-    padding-bottom: 3rem;
+    padding-bottom: 13.3vw;
     position: relative;
 
     .img {
@@ -476,18 +476,90 @@ header {
 
     .section-divider {
         position: absolute;
-        width: 100%;
-        top: auto;
+        width: calc(100% + 5px);
+        bottom: 0 !important;
+        display: flex;
         // transform: translateY(100%);
 
         img {
-            width: 100%;
+            width: calc(100% + 5px);
+            max-height: 6rem;
+            align-self: flex-end;
         }
     }
 
 }
 
 .moves {
-    height: 500px;
+    height: auto;
     background-color: #fff;
+    margin-top: 6rem;
+    padding-bottom: 5rem;
+
+    .section-header {
+        text-align: center;
+        color: #000;
+    }
+
+    .videos-container {
+        @include desktop-sm {
+            flex-direction: column;
+        }
+
+        width: 90%;
+        max-width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        .video {
+            @include desktop-sm {
+                margin-bottom: 1.5rem;
+                width: 100%;
+            }
+
+            width: 49%;
+            position: relative;
+            cursor: pointer;
+
+            video {
+                width: 100%;
+            }
+
+            .play-button {
+                width: 100px;
+                height: 100px;
+                border: 2px solid #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 100%;
+                pointer-events: none;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: opacity .1s;
+
+                span {
+                    position: relative;
+                    left: .2em;
+                    width: 1px;
+                    height: 1px;
+                    display: inline-block;
+                    border-top: 1.2em solid transparent;
+                    border-bottom: 1.2em solid transparent;
+                    border-left: 1.8em solid #fff;
+                    // top: 50%;
+                    // left: 50%;
+                    // transform: translate(-50%, -50%);
+                }
+
+                &.hidden {
+                    opacity: 0;
+                }
+            }
+        }
+    }
 }

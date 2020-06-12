@@ -16,3 +16,18 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+
+const videos = document.querySelectorAll('video');
+
+videos.forEach((video, inx) => {
+    const playBtn = document.getElementById(`${ inx + 1 }`)
+    video.addEventListener('mouseover', (e) => {
+        video.play();
+        playBtn.classList.add('hidden')
+    })
+    video.addEventListener('mouseout', (e) => {
+        video.currentTime = 0;
+        video.pause();
+        playBtn.classList.remove('hidden')
+    })
+})
