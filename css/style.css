@@ -626,10 +626,11 @@ header .battle-pass-container .text-container h2 {
 }
 
 .moves .videos-container .video .play-button {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border: 2px solid #fff;
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -663,5 +664,169 @@ header .battle-pass-container .text-container h2 {
 
 .moves .videos-container .video .play-button.hidden {
   opacity: 0;
+}
+
+.drop {
+  background: url(https://cdn2.unrealengine.com/Fortnite%2Fch2-s2%2FGliders_BG_Isolated-1920x1144-f6d1625ca0bce2c4a5109a5b740039f6433fb24a.png);
+  background-size: cover;
+  background-position: center;
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+  height: 90vh;
+  position: relative;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 930px) {
+  .drop {
+    height: 400px;
+  }
+}
+
+.drop .section-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 10;
+}
+
+.drop .drop-img {
+  position: absolute;
+  height: 80%;
+}
+
+@media (max-width: 530px) {
+  .drop .drop-img {
+    height: 60%;
+  }
+}
+
+.drop .drop-img img {
+  height: 100%;
+}
+
+.drop .drop-img.left {
+  top: auto;
+  left: 10%;
+  bottom: 0;
+  -webkit-transform: translate(0, 10%);
+          transform: translate(0, 10%);
+  -webkit-animation: anim1 linear 5s infinite;
+          animation: anim1 linear 5s infinite;
+}
+
+@media (max-width: 600px) {
+  .drop .drop-img.left {
+    left: -15%;
+  }
+}
+
+@media (max-width: 530px) {
+  .drop .drop-img.left {
+    bottom: 5%;
+  }
+}
+
+.drop .drop-img.right {
+  right: 5%;
+  bottom: 0;
+  -webkit-transform: translate(0, -5%);
+          transform: translate(0, -5%);
+  -webkit-animation: anim2 linear 5s infinite;
+          animation: anim2 linear 5s infinite;
+}
+
+@media (max-width: 600px) {
+  .drop .drop-img.right {
+    right: -15%;
+  }
+}
+
+@media (max-width: 530px) {
+  .drop .drop-img.right {
+    bottom: 5%;
+    right: -20%;
+  }
+}
+
+@-webkit-keyframes anim1 {
+  0% {
+    -webkit-transform: translate(0, 10%);
+            transform: translate(0, 10%);
+  }
+  25% {
+    -webkit-transform: translate(-2%, 12%);
+            transform: translate(-2%, 12%);
+  }
+  50% {
+    -webkit-transform: translate(2%, 10%);
+            transform: translate(2%, 10%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 10%);
+            transform: translate(0%, 10%);
+  }
+}
+
+@keyframes anim1 {
+  0% {
+    -webkit-transform: translate(0, 10%);
+            transform: translate(0, 10%);
+  }
+  25% {
+    -webkit-transform: translate(-2%, 12%);
+            transform: translate(-2%, 12%);
+  }
+  50% {
+    -webkit-transform: translate(2%, 10%);
+            transform: translate(2%, 10%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 10%);
+            transform: translate(0%, 10%);
+  }
+}
+
+@-webkit-keyframes anim2 {
+  0% {
+    -webkit-transform: translate(0, -5%);
+            transform: translate(0, -5%);
+  }
+  25% {
+    -webkit-transform: translate(-2%, -8%);
+            transform: translate(-2%, -8%);
+  }
+  50% {
+    -webkit-transform: translate(2%, -5%);
+            transform: translate(2%, -5%);
+  }
+  100% {
+    -webkit-transform: translate(0%, -5%);
+            transform: translate(0%, -5%);
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    -webkit-transform: translate(0, -5%);
+            transform: translate(0, -5%);
+  }
+  25% {
+    -webkit-transform: translate(-2%, -8%);
+            transform: translate(-2%, -8%);
+  }
+  50% {
+    -webkit-transform: translate(2%, -5%);
+            transform: translate(2%, -5%);
+  }
+  100% {
+    -webkit-transform: translate(0%, -5%);
+            transform: translate(0%, -5%);
+  }
 }
 /*# sourceMappingURL=style.css.map */
