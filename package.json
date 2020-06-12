@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://github.com/egortrussov/fortnite-landing-clone",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gh-pages -d dist"
@@ -16,7 +17,6 @@
   "bugs": {
     "url": "https://github.com/egortrussov/fortnite-landing-clone/issues"
   },
-  "homepage": "https://github.com/egortrussov/fortnite-landing-clone",
   "dependencies": {
     "gh-pages": "^3.0.0"
   }
